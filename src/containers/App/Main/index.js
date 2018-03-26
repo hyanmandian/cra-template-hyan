@@ -1,3 +1,4 @@
-import Container from '../../../components/Container';
+import styled from 'styled-components';
 
-export default Container.withComponent('main');
+export default styled.main`
+`;

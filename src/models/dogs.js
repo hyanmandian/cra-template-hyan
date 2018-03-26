@@ -1,7 +1,7 @@
 import { dispatch } from '@rematch/core';
 import API from '../api';
 
-export default  {
+export default {
   state: {
     image: '',
   },
@@ -23,4 +23,4 @@ export default  {
       }, 2000);
     },
   },
-}
+};

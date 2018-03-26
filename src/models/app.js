@@ -1,4 +1,4 @@
-export default  {
+export default {
   state: {
     loading: false,
   },
@@ -7,4 +7,4 @@ export default  {
       return { ...state, loading };
     },
   },
-}
+};

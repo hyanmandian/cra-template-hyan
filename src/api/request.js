@@ -1,9 +1,5 @@
 import axios from 'axios';
 
-axios.interceptors.response.use((response) => {
-  return response.config.method === 'head' ? response : response.data;
-}, (error) => {
-  return Promise.reject(error);
-});
+axios.interceptors.response.use(response => (response.config.method === 'head' ? response : response.data), Promise.reject);
 
 export default axios;
