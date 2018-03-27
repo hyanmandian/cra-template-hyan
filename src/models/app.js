@@ -4,7 +4,10 @@ export default {
   },
   reducers: {
     toggleLoading(state, loading) {
-      return { ...state, loading };
+      return {
+        ...state,
+        loading: loading !== undefined ? loading : !state.loading,
+      };
     },
   },
 };

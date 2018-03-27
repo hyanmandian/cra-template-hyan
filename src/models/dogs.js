@@ -3,7 +3,7 @@ import API from '../api';
 
 export default {
   state: {
-    image: '',
+    image: null,
   },
   reducers: {
     setImage(_, image) {
@@ -16,11 +16,9 @@ export default {
 
       const { message } = await API.dogs.randomImage();
 
-      setTimeout(() => {
-        this.setImage(message);
+      this.setImage(message);
 
-        dispatch.app.toggleLoading(false);
-      }, 2000);
+      dispatch.app.toggleLoading(false);
     },
   },
 };
