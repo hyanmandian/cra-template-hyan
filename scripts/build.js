@@ -26,6 +26,7 @@ const {
   printFileSizesAfterBuild,
 } = require('react-dev-utils/FileSizeReporter');
 const printBuildError = require('react-dev-utils/printBuildError');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const useYarn = fs.existsSync(paths.yarnLockFile);
 
@@ -43,6 +44,12 @@ function copyPublicFolder() {
     dereference: true,
     filter: file => file !== paths.appHtml,
   });
+}
+
+if (process.argv.slice(2).indexOf('--analyze') >= 0) {
+  config.plugins.push(new BundleAnalyzerPlugin({
+    defaultSizes: 'gzip',
+  }));
 }
 
 // Create the production build and print the deployment instructions.
