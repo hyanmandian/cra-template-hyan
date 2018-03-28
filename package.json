@@ -132,7 +132,7 @@
     "babel-plugin-jsx-control-statements": "^3.2.8",
     "babel-plugin-styled-components": "^1.5.1",
     "babel-preset-react-app": "^3.1.1",
-    "babel-runtime": "^6.26.0",
+    "babel-runtime": "^6.23.0",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
     "css-loader": "0.28.11",
     "dotenv": "5.0.1",
