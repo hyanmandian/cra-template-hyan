@@ -12,7 +12,7 @@ const chalk = require('chalk');
 
 const rootDir = path.join(__dirname, '/..');
 
-console.log('Cleaning italpreliob...'); // eslint-disable-line no-console
+console.log('Cleaning etalpreliob...'); // eslint-disable-line no-console
 
 // Handle api
 shell.rm('-rf', path.join(rootDir, '/src/api/sources/**/*'));
