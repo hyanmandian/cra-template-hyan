@@ -23,7 +23,7 @@ shell.rm('-rf', path.join(rootDir, '/src/models/**/*'));
 shell.cp(path.join(rootDir, '/scripts/templates/export.js'), path.join(rootDir, '/src/models/index.js')); // eslint-disable-line max-len
 
 // Cleanup components
-shell.rm('-rf', path.join(rootDir, '/src/components/**/*'));
+shell.rm('-rf', path.join(rootDir, '/src/components/Container'));
 
 // Handle containers
 shell.rm('-rf', path.join(rootDir, '/src/containers/**/*'));

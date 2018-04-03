@@ -1,30 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { Switch, Route } from 'react-router';
+import { ThemeProvider } from 'styled-components';
+import { HelmetProvider } from 'react-helmet-async';
 import { ConnectedRouter } from 'react-router-redux';
 
-import './globalStyles';
+import { theme } from './globalStyles';
 
 import registerServiceWorker from './registerServiceWorker';
 import configureStore, { history } from './configureStore';
-import App from './containers/App';
-import NotFound from './containers/NotFound';
-import Home from './containers/Home';
+import Routes from './routes';
 
 const MOUNT_NODE = document.getElementById('root');
 
 function render() {
   ReactDOM.render(
     <Provider store={configureStore()}>
-      <ConnectedRouter history={history}>
-        <App>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route component={NotFound} />
-          </Switch>
-        </App>
-      </ConnectedRouter>
+      <HelmetProvider>
+        <ConnectedRouter history={history}>
+          <ThemeProvider theme={theme}>
+            <Routes />
+          </ThemeProvider>
+        </ConnectedRouter>
+      </HelmetProvider>
     </Provider>,
     MOUNT_NODE,
   );

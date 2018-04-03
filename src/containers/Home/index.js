@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { object, bool } from 'prop-types';
 import { connect } from 'react-redux';
-
+import Head from '../../components/Head';
 import Container from '../../components/Container';
 
 class Home extends PureComponent {
@@ -26,6 +26,7 @@ class Home extends PureComponent {
 
     return (
       <Container>
+        <Head title="Home" />
         <Choose>
           <When condition={loading}>
             <strong>Loading</strong>
