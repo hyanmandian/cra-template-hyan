@@ -30,9 +30,6 @@ shell.rm('-rf', path.join(rootDir, '/src/containers/**/*'));
 shell.mkdir(path.join(rootDir, '/src/containers/App'));
 shell.cp(path.join(rootDir, '/scripts/templates/App.js'), path.join(rootDir, '/src/containers/App/index.js')); // eslint-disable-line max-len
 
-// Replace index.js
-shell.cp(path.join(rootDir, '/scripts/templates/index.js'), path.join(rootDir, '/src/index.js')); // eslint-disable-line max-len
-
 // Remove .git
 shell.rm('-rf', '.git');
 
