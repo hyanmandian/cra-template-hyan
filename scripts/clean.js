@@ -29,6 +29,7 @@ shell.rm('-rf', path.join(rootDir, '/src/components/Container'));
 shell.rm('-rf', path.join(rootDir, '/src/containers/**/*'));
 shell.mkdir(path.join(rootDir, '/src/containers/App'));
 shell.cp(path.join(rootDir, '/scripts/templates/App.js'), path.join(rootDir, '/src/containers/App/index.js')); // eslint-disable-line max-len
+shell.mkdir(path.join(rootDir, '/src/containers/Home'));
 shell.cp(path.join(rootDir, '/scripts/templates/Home.js'), path.join(rootDir, '/src/containers/Home/index.js')); // eslint-disable-line max-len
 
 // Replace routes
