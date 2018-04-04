@@ -6,7 +6,9 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "clean-project": "node scripts/clean.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -76,6 +78,7 @@
       }
     },
     "rules": {
+      "import/no-extraneous-dependencies": 0,
       "react/require-default-props": 0,
       "import/prefer-default-export": 0,
       "react/jsx-filename-extension": 0,
@@ -104,6 +107,9 @@
       "linebreak-style": 0
     }
   },
+  "eslintIgnore": [
+    "stories.js"
+  ],
   "dependencies": {
     "@rematch/core": "^0.6.0",
     "axios": "^0.18.0",
@@ -128,6 +134,11 @@
     "styled-components": "^3.2.5"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.4.0",
+    "@storybook/addon-info": "^3.4.0",
+    "@storybook/addon-links": "^3.4.0",
+    "@storybook/addons": "^3.4.0",
+    "@storybook/react": "^3.4.0",
     "autoprefixer": "8.2.0",
     "babel-core": "6.26.0",
     "babel-eslint": "8.2.2",
