@@ -1,13 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import Banner from './images/banner.jpg';
 import './style.scss';
 
-class Header extends React.Component { // eslint-disable-line react/prefer-stateless-function
+/* eslint-disable react/prefer-stateless-function */
+class Header extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <div className="header">
         <a href="https://twitter.com/flexdinesh">
@@ -29,6 +30,11 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
     );
   }
 }
+
+Header.propTypes = {
+  counter: PropTypes.node.isRequired,
+  onIncrement: PropTypes.func.isRequired,
+};
 
 const mapState = ({ counter }) => ({ counter });
 
