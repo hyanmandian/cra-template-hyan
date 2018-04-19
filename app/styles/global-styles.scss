@@ -5,17 +5,15 @@ body {
 }
 
 body {
+  line-height: 1;
+  font-size: 62.5%;
+  padding-top: 30px;
+  background-color: #fafafa;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 body.fontLoaded {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-#app {
-  background-color: #fafafa;
-  min-height: 100%;
-  min-width: 100%;
 }
 
 p,
