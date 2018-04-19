@@ -14,13 +14,11 @@ const AppFooter = styled.footer`
   }
 `;
 
-const Footer = () => {
-  return (
-    <AppFooter>
-      <section>This project is licensed under the MIT license.</section>
-    </AppFooter>
-  );
-};
+const Footer = () => (
+  <AppFooter>
+    <section>This project is licensed under the MIT license.</section>
+  </AppFooter>
+);
 
 Footer.displayName = 'Footer';
 

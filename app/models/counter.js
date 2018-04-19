@@ -5,7 +5,7 @@ export default {
       return { value: value + 1 };
     },
     decrement({ value }) {
-      return { value: value - 1 };
+      return { value: value > 0 ? value - 1 : value };
     },
   },
 };
