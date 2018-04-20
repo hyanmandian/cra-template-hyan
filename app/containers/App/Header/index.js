@@ -7,6 +7,7 @@ import Button from 'components/Button';
 
 const HeaderContainer = styled.div`
   margin-bottom: 10px;
+  padding-bottom: 10px;
 `;
 
 HeaderContainer.Header = styled.header`

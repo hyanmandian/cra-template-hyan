@@ -9,6 +9,10 @@
     "react",
     "stage-0"
   ],
+  "plugins": [
+    "jsx-control-statements",
+    "styled-components"
+  ],
   "env": {
     "production": {
       "only": ["app"],

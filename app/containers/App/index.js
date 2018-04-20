@@ -1,19 +1,32 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
-// import { Switch, Route } from 'react-router-dom';
+import styled from 'styled-components';
+import { node } from 'prop-types';
+import Helmet from 'react-helmet-async';
 
-import Header from 'components/Header';
-import Footer from 'components/Footer';
-import './style.scss';
+import Header from './Header';
+import Footer from './Footer';
 
-const App = () => (
-  <div className="app-wrapper">
-    <Helmet titleTemplate="%s - React.js Boilerplate" defaultTitle="React.js Boilerplate">
-      <meta name="description" content="A React.js Boilerplate application" />
+const Wrapper = styled.div`
+  max-width: calc(768px + 16px * 2);
+  margin: 0 auto;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+`;
+
+const App = ({ children }) => (
+  <Wrapper>
+    <Helmet titleTemplate="%s - React Etalpreliob" defaultTitle="React Etalpreliob">
+      <meta name="description" content="A React Etalpreliob application" />
     </Helmet>
     <Header />
+    <main>{children}</main>
     <Footer />
-  </div>
+  </Wrapper>
 );
+
+App.propTypes = {
+  children: node,
+};
 
 export default App;

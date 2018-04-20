@@ -1,7 +1,3 @@
-/**
- * COMMON WEBPACK CONFIGURATION
- */
-
 const path = require('path');
 const webpack = require('webpack');
 
@@ -27,12 +23,6 @@ module.exports = (options) => ({
           loader: 'babel-loader',
           options: options.babelQuery,
         },
-      },
-      {
-        // Preprocess our own .scss files
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         // Preprocess 3rd party .css files located in node_modules

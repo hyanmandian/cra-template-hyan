@@ -1,6 +1,10 @@
 {
     "parser": "babel-eslint",
-    "extends": ["airbnb", "plugin:react/recommended"],
+    "extends": [
+      "airbnb",
+      "plugin:react/recommended",
+      "plugin:jsx-control-statements/recommended"
+    ],
     "env": {
       "browser": true,
       "node": true,
@@ -9,7 +13,8 @@
     },
     "plugins": [
       "react",
-      "jsx-a11y"
+      "jsx-a11y",
+      "jsx-control-statements"
     ],
     "parserOptions": {
       "ecmaVersion": 6,
@@ -19,6 +24,7 @@
       }
     },
     "rules": {
+      "react/jsx-no-undef": [2, { "allowGlobals": true }],
       "no-param-reassign": "off",
       "function-paren-newline": "off",
       "arrow-parens": [

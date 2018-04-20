@@ -1,4 +1,4 @@
-import counter from 'models/counter';
+import counter from './counter';
 
 export default {
   counter,

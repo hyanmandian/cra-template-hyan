@@ -1,11 +1,9 @@
 import { darken } from 'polished';
 import styled from 'styled-components';
 
-const buttonColor = '#41addd';
-
 export default styled.button`
   outline: 0;
-  color: ${buttonColor};
+  color: ${({ theme }) => theme.color.pictonBlue};
   cursor: pointer;
   font-weight: bold;
   user-select: none;
@@ -14,15 +12,15 @@ export default styled.button`
   padding: 10px 15px;
   display: inline-block;
   background-color: #fff;
-  border: 2px solid ${buttonColor};
+  border: 2px solid ${({ theme }) => theme.color.pictonBlue};
 
   &:hover {
     color: #fff;
-    background-color: ${buttonColor};
+    background-color: ${({ theme }) => theme.color.pictonBlue};
   }
 
   &:active {
-    border-color: ${darken(0.1, buttonColor)};
-    background-color: ${darken(0.1, buttonColor)};
+    border-color: ${({ theme }) => darken(0.1, theme.color.pictonBlue)};
+    background-color: ${({ theme }) => darken(0.1, theme.color.pictonBlue)};
   }
 `;
