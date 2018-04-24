@@ -7,6 +7,7 @@ export const theme = {
   },
 };
 
+/* eslint-disable no-unused-expressions */
 injectGlobal`
   html,
   body {
@@ -25,3 +26,4 @@ injectGlobal`
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 `;
+/* eslint-enable */

@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link as ReLink } from 'react-router-dom';
 
-const isInternal = (url) => /^\/(?!\/)/.test(url);
+import isInternal from 'utils/isInternal';
 
 const Link = ({
-  to, location, className, children
+  to,
+  location,
+  className,
+  children,
 }) => (
   <Choose>
     <When condition={isInternal(to)}>

@@ -1,17 +1,11 @@
-/**
- * Test the request function
- */
-
-import request from '../request';
+import request from './';
 
 describe('request', () => {
-  // Before each test, stub the fetch function
   beforeEach(() => {
     window.fetch = jest.fn();
   });
 
   describe('stubbing successful response', () => {
-    // Before each test, pretend we got a successful response
     beforeEach(() => {
       const res = new Response('{"hello":"world"}', {
         status: 200,
@@ -34,7 +28,6 @@ describe('request', () => {
   });
 
   describe('stubbing 204 response', () => {
-    // Before each test, pretend we got a successful response
     beforeEach(() => {
       const res = new Response('', {
         status: 204,
@@ -55,7 +48,6 @@ describe('request', () => {
   });
 
   describe('stubbing error response', () => {
-    // Before each test, pretend we got an unsuccessful response
     beforeEach(() => {
       const res = new Response('', {
         status: 404,
