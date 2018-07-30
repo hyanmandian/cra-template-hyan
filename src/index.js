@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
+import { ThemeProvider } from 'styled-components';
 
 import App from './containers/App';
 import Routes from './routes';
 import createStore from './createStore';
 import registerServiceWorker from './registerServiceWorker';
-import './globalStyles';
+import { theme } from './globalStyles';
 
 export const { store, dispatch } = createStore();
 
@@ -17,9 +18,11 @@ function render() {
   ReactDOM.render(
     <Provider store={store}>
       <AppContainer>
-        <App>
-          <Routes />
-        </App>
+        <ThemeProvider theme={theme}>
+          <App>
+            <Routes />
+          </App>
+        </ThemeProvider>
       </AppContainer>
     </Provider>
   , MOUNT_NODE);

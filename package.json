@@ -2,6 +2,14 @@
   "name": "react-etalpreliob",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "analyze": "cross-env ANALYZE=true npm run build",
+    "test": "react-app-rewired test --env=jsdom",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
   "dependencies": {
     "@reach/router": "^1.1.1",
     "@rematch/core": "^1.0.0-beta.4",
@@ -15,21 +23,20 @@
     "sanitize.css": "^6.0.0",
     "styled-components": "^3.3.3"
   },
-  "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "analyze": "cross-env ANALYZE=true npm run build",
-    "test": "react-app-rewired test --env=jsdom",
-    "webpack-defaults": "webpack-defaults"
-  },
   "devDependencies": {
+    "@storybook/addon-info": "^3.4.8",
+    "@storybook/react": "^4.0.0-alpha.14",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
     "cross-env": "^5.2.0",
-    "react-scripts": "^1.1.4",
+    "css-loader": "^1.0.0",
     "react-app-rewire-hot-loader": "^1.0.1",
     "react-app-rewire-imagemin-plugin": "^1.0.1",
     "react-app-rewire-styled-components": "^3.0.2",
     "react-app-rewire-svgr": "^1.1.1",
     "react-app-rewire-webpack-bundle-analyzer": "^1.0.1",
-    "react-app-rewired": "^1.5.2"
+    "react-app-rewired": "^1.5.2",
+    "react-scripts": "^1.1.4",
+    "styled-loader": "^0.0.0"
   }
 }
