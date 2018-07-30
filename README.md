@@ -12,6 +12,7 @@ Just another boilerplate based create-react-app (everything that works with crea
 - Sanitize.css
 - Reach Router
 - React Loadable
+- Bundle Analyzer
 - Styled Components
 
 ## Contributors
