@@ -8,19 +8,28 @@
     "axios": "^0.18.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
-    "react-app-rewire-hot-loader": "^1.0.1",
-    "react-app-rewired": "^1.5.2",
     "react-dom": "^16.4.1",
     "react-hot-loader": "^4.3.4",
     "react-loadable": "^5.4.0",
     "react-redux": "^5.0.7",
-    "react-scripts": "^1.1.4",
     "sanitize.css": "^6.0.0",
     "styled-components": "^3.3.3"
   },
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test --env=jsdom"
+    "analyze": "cross-env ANALYZE=true npm run build",
+    "test": "react-app-rewired test --env=jsdom",
+    "webpack-defaults": "webpack-defaults"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "react-scripts": "^1.1.4",
+    "react-app-rewire-hot-loader": "^1.0.1",
+    "react-app-rewire-imagemin-plugin": "^1.0.1",
+    "react-app-rewire-styled-components": "^3.0.2",
+    "react-app-rewire-svgr": "^1.1.1",
+    "react-app-rewire-webpack-bundle-analyzer": "^1.0.1",
+    "react-app-rewired": "^1.5.2"
   }
 }
