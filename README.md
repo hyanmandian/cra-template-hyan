@@ -5,12 +5,12 @@ Just another boilerplate based create-react-app (everything that works with crea
 
 - Jest
 - Axios
-- Rematch
 - Rewired
+- Rematch
 - Storybook
 - Hot Loader
-- Reach Router
 - Sanitize.css
+- Reach Router
 - React Loadable
 - Styled Components
 
