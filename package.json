@@ -2,13 +2,21 @@
   "name": "react-etalpreliob",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "author": "Hyan Mandian <hyanmandian@hotmail.com>",
+  "repository": "hyanmandian/react-etalpreliob",
+  "bugs": {
+    "url": "https://github.com/hyanmandian/react-etalpreliob/issues"
+  },
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "analyze": "cross-env ANALYZE=true npm run build",
     "test": "react-app-rewired test --env=jsdom",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   },
   "dependencies": {
     "@reach/router": "^1.1.1",
@@ -26,6 +34,7 @@
   "devDependencies": {
     "@storybook/addon-info": "^3.4.8",
     "@storybook/react": "^4.0.0-alpha.14",
+    "all-contributors-cli": "^5.3.0",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "react-app-rewire-hot-loader": "^1.0.1",

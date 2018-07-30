@@ -1,0 +1,54 @@
+{
+  "projectName": "react-etalpreliob",
+  "projectOwner": "hyanmandian",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "hyanmandian",
+      "name": "Hyan Mandian",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5044101?v=3",
+      "profile": "https://github.com/hyanmandian",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "andreoav",
+      "name": "Andreo Vieira",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/508827?v=3",
+      "profile": "https://github.com/andreoav",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas",
+        "tool"
+      ]
+    },
+    {
+      "login": "lucassveloso",
+      "name": "Lucas Veloso",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4587602?v=3",
+      "profile": "https://github.com/lucassveloso",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "guilhermecomum",
+      "name": "Guilherme Guerra",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1606048?s=460&v=4",
+      "profile": "https://github.com/guilhermecomum",
+      "contributions": [
+        "ideas"
+      ]
+    }
+  ]
+}
