@@ -4,7 +4,7 @@ import Loadable from 'react-loadable';
 
 const Home = Loadable({
   loader: () => import('./containers/Home'),
-  loading: () => "Loading...",
+  loading: () => 'Loading...',
 });
 
 export default function Routes() {

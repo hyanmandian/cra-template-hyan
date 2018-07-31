@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
-import { node } from "prop-types";
+import React, { Fragment } from 'react';
+import { node } from 'prop-types';
 
-import Head from "@/components/Head";
+import Head from '@/components/Head';
 
 export default function App({ children }) {
   return (
@@ -16,5 +16,5 @@ export default function App({ children }) {
 }
 
 App.propTypes = {
-  children: node
+  children: node,
 };

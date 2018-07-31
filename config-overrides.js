@@ -1,7 +1,7 @@
 const path = require('path');
 const rewireReactHotLoader = require('react-app-rewire-hot-loader');
 const rewireStyledComponents = require('react-app-rewire-styled-components');
-const rewireWebpackBundleAnalyzer = require('react-app-rewire-webpack-bundle-analyzer')
+const rewireWebpackBundleAnalyzer = require('react-app-rewire-webpack-bundle-analyzer');
 const rewireImageminPlugin = require('react-app-rewire-imagemin-plugin');
 const rewireSVGR = require('react-app-rewire-svgr');
 
@@ -42,4 +42,4 @@ module.exports = (config, env) => {
   };
 
   return config;
-}
+};

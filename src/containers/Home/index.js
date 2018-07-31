@@ -1,8 +1,8 @@
-import React, { PureComponent } from "react";
-import { connect } from "react-redux";
+import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
 
-import Container from "@/components/Container";
-import Head from "@/components/Head";
+import Container from '@/components/Container';
+import Head from '@/components/Head';
 
 export class Home extends PureComponent {
   handleClick = async () => {

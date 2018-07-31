@@ -10,7 +10,7 @@ export default function configureStore(initialState = {}) {
 
   if (module.hot) {
     module.hot.accept('./models', () => {
-      Object.keys(models).forEach((modelKey) => {
+      Object.keys(models).forEach(modelKey => {
         store.model({ name: modelKey, ...models[modelKey] });
       });
     });
