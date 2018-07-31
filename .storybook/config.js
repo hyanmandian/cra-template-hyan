@@ -1,23 +1,21 @@
 import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { ThemeProvider } from 'styled-components';
-import { Router } from 'react-router-dom';
 
-import { history } from '../app/configureStore';
-import { theme } from '../app/globalStyles';
+import './styles.css';
 
-const req = require.context('../app/components', true, /stories.js$/);
+import { theme } from '../src/globalStyles';
+
+const req = require.context('../src/components', true, /stories.js$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
 
 addDecorator(story => (
-  <ThemeProvider theme={theme}>
-    <Router history={history}>
-      {story()}
-    </Router>
-  </ThemeProvider>
+  <div className="storybook-content">
+    <ThemeProvider theme={theme}>{story()}</ThemeProvider>
+  </div>
 ));
 
 configure(loadStories, module);
