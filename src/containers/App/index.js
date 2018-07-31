@@ -1,14 +1,20 @@
-import React from 'react';
-import { node } from 'prop-types';
+import React, { Fragment } from "react";
+import { node } from "prop-types";
+
+import Head from "@/components/Head";
 
 export default function App({ children }) {
   return (
-    <main>
-      {children}
-    </main>
+    <Fragment>
+      <Head
+        titleTemplate="%s - React Etalpreliob"
+        defaultTitle="React Etalpreliob"
+      />
+      <main>{children}</main>
+    </Fragment>
   );
-};
+}
 
 App.propTypes = {
-  children: node,
+  children: node
 };

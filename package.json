@@ -25,6 +25,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-helmet-async": "^0.1.0-alpha",
     "react-hot-loader": "^4.3.4",
     "react-loadable": "^5.4.0",
     "react-redux": "^5.0.7",
