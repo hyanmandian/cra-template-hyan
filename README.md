@@ -4,7 +4,6 @@
 
 Just another boilerplate based create-react-app (everything that works with create-react-app works with us) with many useful things like:
 
-- Jest
 - Axios
 - Rewired
 - Rematch
