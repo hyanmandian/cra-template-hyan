@@ -3,24 +3,6 @@ body {
   height: 100%;
 }
 
-body {
-  background-image: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 7px,
-      rgba(0, 0, 0, 0.2) 1px,
-      transparent 8px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 7px,
-      rgba(0, 0, 0, 0.2) 1px,
-      transparent 8px
-    );
-  background-position: 0px -5px;
-}
-
 .storybook-content {
-  padding: 18px 20px 0;
+  padding: 20px 20px 0;
 }
