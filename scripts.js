@@ -9,13 +9,16 @@ process.stdin.resume();
 process.stdin.setEncoding('utf8');
 process.stdout.write('\n\n');
 
+function onEnd() {
+  process.stdout.write('\nDone!');
+  process.exit(0);
+}
+
 function onInstallDependencies() {
   process.stdout.write('\n\n');
 
   rimraf('.git/', () => {
-    exec('git init && git add . && git commit -m "Initial commit"', () => {
-      process.stdout.write('Done!');
-    });
+    exec('git init && git add . && git commit -m "Initial commit"', onEnd);
   });
 }
 
