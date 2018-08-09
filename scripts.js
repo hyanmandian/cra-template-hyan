@@ -57,7 +57,7 @@ if (task === 'clean') {
       replace: ['React Etalpreliob', ''],
     },
     {
-      file: path.resolve(__dirname, 'src/containers/Home'),
+      file: path.resolve(__dirname, 'src/containers/Home/index.js'),
       replace: `
         import React from 'react';
 
@@ -78,15 +78,13 @@ if (task === 'clean') {
   filesToRemove.forEach(file => rimraf.sync(file));
 
   filesToReplace.forEach(({ file, replace }) => {
-    fs.readFile(file, 'utf8', (err, data) => {
-      if (err) return console.log(err);
+    const data = fs.readFileSync(file, 'utf8');
 
-      const content = Array.isArray(replace)
-        ? data.replace(replace[0], replace[1])
-        : replace;
+    const content = Array.isArray(replace)
+      ? data.replace(replace[0], replace[1])
+      : replace;
 
-      fs.writeFile(file, content, 'utf8');
-    });
+    fs.writeFileSync(file, content, 'utf8');
   });
 }
 
