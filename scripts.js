@@ -28,13 +28,15 @@ if (task === 'setup') {
 
   process.stdout.write('Installing dependencies... (This might take a while)');
 
-  return exec('yarn --version', (err, stdout, stderr) => {
+  exec('yarn --version', (err, stdout, stderr) => {
     if (parseFloat(stdout) < 0.15 || err || process.env.USE_YARN === 'false') {
       exec('npm install', onInstallDependencies);
     } else {
       exec('yarn install', onInstallDependencies);
     }
   });
+
+  return;
 }
 
 if (task === 'clean') {
@@ -46,11 +48,11 @@ if (task === 'clean') {
   const filesToReplace = [
     {
       file: path.resolve(__dirname, 'src/api/index.js'),
-      replace: 'export default { };',
+      replace: 'export default {};\n',
     },
     {
       file: path.resolve(__dirname, 'src/models/index.js'),
-      replace: 'export default { };',
+      replace: 'export default {};\n',
     },
     {
       file: path.resolve(__dirname, 'src/containers/App/index.js'),
@@ -86,6 +88,8 @@ if (task === 'clean') {
 
     fs.writeFileSync(file, content, 'utf8');
   });
+
+  return;
 }
 
 onEnd('Invalid task!');
