@@ -35,7 +35,9 @@ module.exports = (config, env) => {
   }
 
   config = rewireStyledComponents(config, env);
+
   config = rewireSVGR(config, env);
+
   config.resolve.alias = {
     ...config.resolve.alias,
     '@': path.resolve('./src'),
