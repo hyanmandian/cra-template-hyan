@@ -7,10 +7,10 @@ const task = process.argv.splice(2, process.argv.length - 1).join(' ');
 
 process.stdin.resume();
 process.stdin.setEncoding('utf8');
-process.stdout.write('\n\n');
+process.stdout.write('\n');
 
 function onEnd() {
-  process.stdout.write('\nDone!');
+  process.stdout.write('\n\nDone!\n\n');
   process.exit(0);
 }
 
