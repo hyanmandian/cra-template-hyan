@@ -75,7 +75,7 @@ if (task === 'clean') {
     },
   ];
 
-  filesToRemove.forEach(rimraf);
+  filesToRemove.forEach(rimraf.sync);
 
   filesToReplace.forEach(({ file, replace }) => {
     fs.readFile(file, 'utf8', (err, data) => {
