@@ -56,23 +56,22 @@ if (task === 'clean') {
     },
     {
       file: path.resolve(__dirname, 'src/containers/App/index.js'),
-      replace: [/React Etalpreliob/i, ''],
+      replace: [/React Etalpreliob/gi, ''],
     },
     {
       file: path.resolve(__dirname, 'src/containers/Home/index.js'),
-      replace: `
-  import React from 'react';
+      replace: `import React from 'react';
 
-  import Container from '@/components/Container';
-  import Head from '@/components/Head';
+import Container from '@/components/Container';
+import Head from '@/components/Head';
 
-  export default function Home() {
-    return (
-      <Container>
-        <Head title="Home" />
-      </Container>
-    );
-  }
+export default function Home() {
+  return (
+    <Container>
+      <Head title="Home" />
+    </Container>
+  );
+}
       `,
     },
   ];
