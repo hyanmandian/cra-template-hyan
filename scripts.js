@@ -14,18 +14,18 @@ function onEnd(msg) {
   process.exit(0);
 }
 
-function onInstallDependencies() {
-  process.stdout.write('\n\n');
-
-  rimraf('.git/', () => {
-    exec(
-      'git init && git add . && git commit -m "Initial commit"',
-      onEnd.bind(this, 'Done!')
-    );
-  });
-}
-
 if (task === 'setup') {
+  function onInstallDependencies() {
+    process.stdout.write('\n\n');
+
+    rimraf('.git/', () => {
+      exec(
+        'git init && git add . && git commit -m "Initial commit"',
+        onEnd.bind(this, 'Done!')
+      );
+    });
+  }
+
   process.stdout.write('Installing dependencies... (This might take a while)');
 
   return exec('yarn --version', (err, stdout, stderr) => {
@@ -38,6 +38,42 @@ if (task === 'setup') {
 }
 
 if (task === 'clean') {
+  const filesToRemove = [
+    path.resolve(__dirname, 'src/api/resources/example.js'),
+    path.resolve(__dirname, 'src/models/count.js'),
+  ];
+
+  const filesToReplace = [
+    {
+      file: path.resolve(__dirname, 'src/api/index.js'),
+      content: 'export default { };',
+    },
+    {
+      file: path.resolve(__dirname, 'src/models/index.js'),
+      content: 'export default { };',
+    },
+    {
+      file: path.resolve(__dirname, 'src/containers/App/index.js'),
+      replace: ['React Etalpreliob', ''],
+    },
+    {
+      file: path.resolve(__dirname, 'src/containers/Home'),
+      content: `
+        import React from 'react';
+
+        import Container from '@/components/Container';
+        import Head from '@/components/Head';
+
+        export default function Home() {
+          return (
+            <Container>
+              <Head title="Home" />
+            </Container>
+          );
+        }
+      `,
+    },
+  ];
 }
 
 onEnd('Invalid task!');
