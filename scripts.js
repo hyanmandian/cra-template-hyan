@@ -46,11 +46,11 @@ if (task === 'clean') {
   const filesToReplace = [
     {
       file: path.resolve(__dirname, 'src/api/index.js'),
-      content: 'export default { };',
+      replace: 'export default { };',
     },
     {
       file: path.resolve(__dirname, 'src/models/index.js'),
-      content: 'export default { };',
+      replace: 'export default { };',
     },
     {
       file: path.resolve(__dirname, 'src/containers/App/index.js'),
@@ -58,7 +58,7 @@ if (task === 'clean') {
     },
     {
       file: path.resolve(__dirname, 'src/containers/Home'),
-      content: `
+      replace: `
         import React from 'react';
 
         import Container from '@/components/Container';
@@ -74,6 +74,20 @@ if (task === 'clean') {
       `,
     },
   ];
+
+  filesToRemove.forEach(rimraf);
+
+  filesToReplace.forEach(({ file, replace }) => {
+    fs.readFile(file, 'utf8', (err, data) => {
+      if (err) return console.log(err);
+
+      const content = Array.isArray(replace)
+        ? data.replace(replace[0], replace[1])
+        : replace;
+
+      fs.writeFile(file, content, 'utf8');
+    });
+  });
 }
 
 onEnd('Invalid task!');
