@@ -56,7 +56,7 @@ if (task === 'clean') {
     },
     {
       file: path.resolve(__dirname, 'src/containers/App/index.js'),
-      replace: ['React Etalpreliob', ''],
+      replace: [/React Etalpreliob/i, ''],
     },
     {
       file: path.resolve(__dirname, 'src/containers/Home/index.js'),
