@@ -89,7 +89,7 @@ if (task === 'clean') {
     fs.writeFileSync(file, content, 'utf8');
   });
 
-  return;
+  return onEnd('Done!');
 }
 
 onEnd('Invalid task!');
