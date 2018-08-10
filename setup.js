@@ -31,9 +31,11 @@ function cleanGit() {
 }
 
 function installDependencies() {
-  return process.env.USE_YARN === 'false'
-    ? execSync('npm install')
-    : execSync('yarn install');
+  return execSync(
+    `${
+      process.env.USE_YARN === 'false' ? 'npm' : 'yarn'
+    } install >/dev/null 2>&1`
+  );
 }
 
 function cleanPackageJson() {
@@ -56,12 +58,12 @@ function cleanPackageJson() {
   );
 }
 
-function cleanFiles() {
+function removeFiles() {
   const filesToRemove = [
     resolve(__dirname, '.all-contributorsrc'),
     resolve(__dirname, 'src/api/resources/example.js'),
     resolve(__dirname, 'src/models/count.js'),
-    resolve(__dirname, 'scripts.js'),
+    resolve(__dirname, 'setup.js'),
   ];
 
   const filesToReplace = [
@@ -116,4 +118,24 @@ export default function Home() {
 
 process.stdin.resume();
 process.stdin.setEncoding('utf8');
+process.stdout.write('\n\n');
+
+process.stdout.write('Cleaning package.json...');
+cleanPackageJson();
 process.stdout.write('\n');
+
+process.stdout.write('Removing example files...');
+removeFiles();
+process.stdout.write('\n');
+
+process.stdout.write('Installing dependencies...');
+installDependencies();
+process.stdout.write('\n');
+
+process.stdout.write('Init git...');
+cleanGit();
+process.stdout.write('\n');
+
+process.stdout.write('Done!');
+process.stdout.write('\n\n');
+process.exit(0);
