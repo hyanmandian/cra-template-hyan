@@ -75,6 +75,7 @@ if (task === 'clean') {
     path.resolve(__dirname, '.all-contributorsrc'),
     path.resolve(__dirname, 'src/api/resources/example.js'),
     path.resolve(__dirname, 'src/models/count.js'),
+    path.resolve(__dirname, 'scripts.js'),
   ];
 
   const filesToReplace = [
