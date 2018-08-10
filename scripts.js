@@ -2,12 +2,25 @@
 const { exec } = require('child_process');
 const path = require('path');
 const fs = require('fs');
-const rimraf = require('rimraf');
 const task = process.argv.splice(2, process.argv.length - 1).join(' ');
 
 process.stdin.resume();
 process.stdin.setEncoding('utf8');
 process.stdout.write('\n');
+
+function rimraf(path) {
+  if (!fs.existsSync(path)) return;
+
+  fs.readdirSync(path).forEach((file, index) => {
+    const curPath = path + '/' + file;
+
+    if (fs.lstatSync(curPath).isDirectory()) return rimraf(curPath);
+
+    fs.unlinkSync(curPath);
+  });
+
+  fs.rmdirSync(path);
+}
 
 function onEnd(msg) {
   process.stdout.write(`\n\n${msg}\n\n`);
@@ -18,12 +31,12 @@ if (task === 'setup') {
   function onInstallDependencies() {
     process.stdout.write('\n\n');
 
-    rimraf('.git/', () => {
-      exec(
-        'git init && git add . && git commit -m "Initial commit"',
-        onEnd.bind(this, 'Done!')
-      );
-    });
+    rimraf('.git/');
+
+    exec(
+      'git init && git add . && git commit -m "Initial commit"',
+      onEnd.bind(this, 'Done!')
+    );
   }
 
   process.stdout.write('Installing dependencies... (This might take a while)');
@@ -76,7 +89,7 @@ export default function Home() {
     },
   ];
 
-  filesToRemove.forEach(file => rimraf.sync(file));
+  filesToRemove.forEach(file => rimraf(file));
 
   filesToReplace.forEach(({ file, replace }) => {
     const data = fs.readFileSync(file, 'utf8');
