@@ -16,6 +16,12 @@ Just another boilerplate based create-react-app (everything that works with crea
 - Bundle Analyzer
 - Styled Components
 
+## Getting started
+
+1. Clone this repo using `git clone https://github.com/hyanmandian/react-etalpreliob.git`.
+2. Move to the appropriate directory: `cd react-etalpreliob`.
+3. Run `npm run setup` in order to install dependencies, clean the git repo and remove unnecessary files (like the example app). We auto-detect `yarn` for installing packages by default, if you wish to force `npm` usage do: `USE_YARN=false npm run setup`.
+
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
