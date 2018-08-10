@@ -3,6 +3,18 @@ const { exec } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 const task = process.argv.splice(2, process.argv.length - 1).join(' ');
+const packageJson = require('./package.json');
+
+delete packageJson.scripts['setup'];
+delete packageJson.scripts['clean'];
+delete packageJson.scripts['contributors:add'];
+delete packageJson.scripts['contributors:generate'];
+delete packageJson['author'];
+delete packageJson['name'];
+delete packageJson['repository'];
+delete packageJson['license'];
+delete packageJson['bugs'];
+delete packageJson.devDependencies['all-contributors-cli'];
 
 process.stdin.resume();
 process.stdin.setEncoding('utf8');
@@ -39,6 +51,12 @@ if (task === 'setup') {
     );
   }
 
+  fs.writeFileSync(
+    path.resolve(__dirname, 'package.json'),
+    JSON.stringify(packageJson, null, 2),
+    'utf8'
+  );
+
   process.stdout.write('Installing dependencies... (This might take a while)');
 
   exec('yarn --version', (err, stdout, stderr) => {
@@ -54,11 +72,16 @@ if (task === 'setup') {
 
 if (task === 'clean') {
   const filesToRemove = [
+    path.resolve(__dirname, '.all-contributorsrc'),
     path.resolve(__dirname, 'src/api/resources/example.js'),
     path.resolve(__dirname, 'src/models/count.js'),
   ];
 
   const filesToReplace = [
+    {
+      file: path.resolve(__dirname, 'package.json'),
+      replace: [/react-etalpreliob/gi, ''],
+    },
     {
       file: path.resolve(__dirname, 'src/api/index.js'),
       replace: 'export default {};\n',
@@ -66,6 +89,10 @@ if (task === 'clean') {
     {
       file: path.resolve(__dirname, 'src/models/index.js'),
       replace: 'export default {};\n',
+    },
+    {
+      file: path.resolve(__dirname, 'public/index.html'),
+      replace: [/React Etalpreliob/gi, ''],
     },
     {
       file: path.resolve(__dirname, 'src/containers/App/index.js'),
@@ -89,7 +116,7 @@ export default function Home() {
     },
   ];
 
-  filesToRemove.forEach(file => rimraf(file));
+  filesToRemove.forEach(file => fs.unlinkSync(file));
 
   filesToReplace.forEach(({ file, replace }) => {
     const data = fs.readFileSync(file, 'utf8');
