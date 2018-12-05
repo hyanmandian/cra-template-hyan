@@ -1,40 +1,44 @@
-# React Etalpreliob
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors) [![License: MIT](https://img.shields.io/github/license/hyanmandian/react-etalpreliob.svg)](LICENSE)
+## Available Scripts
 
-Just another boilerplate based create-react-app (everything that works with create-react-app works with us) with many useful things like:
+In the project directory, you can run:
 
-- Axios
-- Rewired
-- Rematch
-- Storybook
-- Hot Loader
-- Sanitize.css
-- Reach Router
-- React Helmet
-- React Loadable
-- Bundle Analyzer
-- Styled Components
+### `npm start`
 
-## Getting started
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-1. Clone this repo using `git clone https://github.com/hyanmandian/react-etalpreliob.git`.
-2. Move to the appropriate directory: `cd react-etalpreliob`.
-3. Run `npm run setup` in order to install dependencies, clean the git repo and remove unnecessary files (like the example app). We auto-detect `yarn` for installing packages by default, if you wish to force `npm` usage do: `USE_YARN=false npm run setup`.
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-## Contributors
+### `npm test`
 
-Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-| [<img src="https://avatars2.githubusercontent.com/u/5044101?v=3" width="100px;"/><br /><sub><b>Hyan Mandian</b></sub>](https://github.com/hyanmandian)<br />[💻](https://github.com/hyanmandian/react-etalpreliob/commits?author=hyanmandian "Code") [📖](https://github.com/hyanmandian/react-etalpreliob/commits?author=hyanmandian "Documentation") [🤔](#ideas-hyanmandian "Ideas, Planning, & Feedback") | [<img src="https://avatars2.githubusercontent.com/u/508827?v=3" width="100px;"/><br /><sub><b>Andreo Vieira</b></sub>](https://github.com/andreoav)<br />[💻](https://github.com/hyanmandian/react-etalpreliob/commits?author=andreoav "Code") [📖](https://github.com/hyanmandian/react-etalpreliob/commits?author=andreoav "Documentation") [🤔](#ideas-andreoav "Ideas, Planning, & Feedback") | [<img src="https://avatars2.githubusercontent.com/u/4587602?v=3" width="100px;"/><br /><sub><b>Lucas Veloso</b></sub>](https://github.com/lucassveloso)<br />[🤔](#ideas-lucassveloso "Ideas, Planning, & Feedback") | [<img src="https://avatars3.githubusercontent.com/u/1606048?s=460&v=4" width="100px;"/><br /><sub><b>Guilherme Guerra</b></sub>](https://github.com/guilhermecomum)<br />[🤔](#ideas-guilhermecomum "Ideas, Planning, & Feedback") |
-| :---: | :---: | :---: | :---: |
+### `npm run build`
 
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
 
-## License
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-[MIT](LICENSE)
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).

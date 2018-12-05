@@ -1,4 +1,3 @@
-#! /usr/bin/env node
 const { execSync } = require('child_process');
 const { resolve } = require('path');
 const {
@@ -62,7 +61,6 @@ function removeFiles() {
   const filesToRemove = [
     resolve(__dirname, '.all-contributorsrc'),
     resolve(__dirname, 'src/api/resources/example.js'),
-    resolve(__dirname, 'src/models/count.js'),
     resolve(__dirname, 'setup.js'),
   ];
 
@@ -76,10 +74,6 @@ function removeFiles() {
       replace: 'export default {};\n',
     },
     {
-      file: resolve(__dirname, 'src/models/index.js'),
-      replace: 'export default {};\n',
-    },
-    {
       file: resolve(__dirname, 'public/index.html'),
       replace: [/React Etalpreliob/gi, ''],
     },
@@ -90,10 +84,8 @@ function removeFiles() {
     {
       file: resolve(__dirname, 'src/containers/Home/index.js'),
       replace: `import React from 'react';
-
 import Container from '@/components/Container';
 import Head from '@/components/Head';
-
 export default function Home() {
   return (
     <Container>

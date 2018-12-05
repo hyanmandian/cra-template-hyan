@@ -1,6 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
-import Helmet from 'react-helmet-async';
+import Helmet from 'react-helmet';
 
 export default function Head({ title, description, ...props }) {
   return (
