@@ -7,7 +7,7 @@ import GlobalStyle from '@/components/GlobalStyle';
 export default function App({ children }) {
   return (
     <Fragment>
-      <Head titleTemplate="%s - React Etalpreliob" defaultTitle="React Etalpreliob"/>
+      <Head titleTemplate="%s - React Etalpreliob" defaultTitle="React Etalpreliob" />
       <GlobalStyle />
       <main>{children}</main>
     </Fragment>

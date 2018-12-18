@@ -7,7 +7,7 @@ module.exports = (config, env) => {
     '@': path.resolve('./src'),
   };
 
-  injectBabelPlugin('emotion', config);
+  injectBabelPlugin('emotion/babel', config);
 
   return config;
 };

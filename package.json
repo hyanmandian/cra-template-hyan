@@ -3,22 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/core": "^10.0.2",
-    "@emotion/styled": "^10.0.2",
+    "@emotion/core": "^10.0.5",
+    "@emotion/styled": "^10.0.5",
     "@reach/router": "^1.2.1",
     "axios": "^0.18.0",
     "prop-types": "^15.6.2",
     "react": "^16.7.0-alpha.2",
     "react-dom": "^16.7.0-alpha.2",
     "react-helmet": "^5.2.0",
-    "react-scripts": "2.1.1",
     "sanitize.css": "^8.0.0"
   },
   "devDependencies": {
     "all-contributors-cli": "^5.4.1",
     "babel-plugin-emotion": "^10.0.5",
     "cross-env": "^5.2.0",
-    "react-app-rewired": "^1.6.2"
+    "react-scripts": "2.1.1",
+    "jest-dom": "^3.0.0",
+    "jest-emotion": "^10.0.5",
+    "react-app-rewired": "^1.6.2",
+    "react-testing-library": "^5.4.0"
   },
   "scripts": {
     "test": "react-app-rewired test",

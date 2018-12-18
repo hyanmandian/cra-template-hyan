@@ -1,13 +1,13 @@
 const { execSync } = require('child_process');
 const { resolve } = require('path');
 const {
-  existsSync,
-  readdirSync,
   lstatSync,
   rmdirSync,
+  unlinkSync,
+  existsSync,
+  readdirSync,
   readFileSync,
   writeFileSync,
-  unlinkSync,
 } = require('fs');
 
 function rimraf(path) {
