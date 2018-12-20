@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 
-import Container from '@/components/Container';
-import Head from '@/components/Head';
+import Head from '#/components/Head';
+import Container from '#/components/Container';
 
 export default function Home() {
-  const [value, setValue] = useState(0);
+  const [counter, setCounter] = useState(0);
 
   return (
     <Container>
       <Head title="Home" />
       Hello :D <br />
-      <button onClick={() => setValue(value + 1)}>+</button> {value}
-      <button onClick={() => setValue(value - 1)}>-</button>
+      <button onClick={() => setCounter(counter + 1)}>+</button> {counter} <button onClick={() => setCounter(counter - 1)}>-</button>
     </Container>
   );
 }
