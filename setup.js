@@ -58,6 +58,10 @@ function cleanPackageJson() {
 }
 
 function removeFiles() {
+  const foldersToRemove = [
+    resolve(__dirname, 'src/containers/Home/__tests__'),
+  ];
+
   const filesToRemove = [
     resolve(__dirname, '.all-contributorsrc'),
     resolve(__dirname, 'src/api/resources/example.js'),
@@ -84,8 +88,9 @@ function removeFiles() {
     {
       file: resolve(__dirname, 'src/containers/Home/index.js'),
       replace: `import React from 'react';
-import Container from '@/components/Container';
-import Head from '@/components/Head';
+import Container from '#/components/Container';
+import Head from '#/components/Head';
+
 export default function Home() {
   return (
     <Container>
@@ -96,6 +101,8 @@ export default function Home() {
 `,
     },
   ];
+
+  foldersToRemove.forEach(folder => rimraf(folder));
 
   filesToRemove.forEach(file => unlinkSync(file));
 
@@ -125,7 +132,7 @@ installDependencies();
 process.stdout.write('\n');
 
 process.stdout.write('Init git...');
-cleanGit();
+//cleanGit();
 process.stdout.write('\n');
 
 process.stdout.write('Done!');
