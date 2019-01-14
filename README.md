@@ -12,7 +12,7 @@ Just another boilerplate based create-react-app (everything that works with crea
 - Sanitize.css
 - Reach Router
 - React Helmet
-- Bundle Analyzer
+- Bundle Analyzer (just add --analyze flag after npm scripts)
 
 ## Getting started
 
