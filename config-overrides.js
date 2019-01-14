@@ -1,11 +1,12 @@
 const path = require("path");
-const { override, addWebpackAlias, addBabelPlugins } = require("customize-cra");
+const { override, addBundleVisualizer, addWebpackAlias, addBabelPlugins } = require("customize-cra");
 
 module.exports = {
   webpack: override(
     addWebpackAlias({
       "#": path.resolve(__dirname, "./src")
     }),
+    addBundleVisualizer({}, true),
     ...addBabelPlugins("emotion", "react-hot-loader/babel")
   ),
   jest: config => {
