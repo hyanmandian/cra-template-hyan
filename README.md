@@ -6,15 +6,13 @@ Just another boilerplate based create-react-app (everything that works with crea
 
 - Axios
 - Rewired
-- Rematch
+- Emotion
 - Storybook
 - Hot Loader
 - Sanitize.css
 - Reach Router
 - React Helmet
-- React Loadable
-- Bundle Analyzer
-- Styled Components
+- Bundle Analyzer (just add --analyze flag after npm scripts)
 
 ## Getting started
 

@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Router } from '@reach/router';
-import Loadable from 'react-loadable';
 
-const Home = Loadable({
-  loader: () => import('./containers/Home'),
-  loading: () => 'Loading...',
-});
+const LazyHome = lazy(() => import('./containers/Home'));
+
+function Home() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LazyHome />
+    </Suspense>
+  )
+}
 
 export default function Routes() {
   return (

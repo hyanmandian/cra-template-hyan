@@ -1,14 +1,13 @@
-#! /usr/bin/env node
 const { execSync } = require('child_process');
 const { resolve } = require('path');
 const {
-  existsSync,
-  readdirSync,
   lstatSync,
   rmdirSync,
+  unlinkSync,
+  existsSync,
+  readdirSync,
   readFileSync,
   writeFileSync,
-  unlinkSync,
 } = require('fs');
 
 function rimraf(path) {
@@ -59,10 +58,13 @@ function cleanPackageJson() {
 }
 
 function removeFiles() {
+  const foldersToRemove = [
+    resolve(__dirname, 'src/containers/Home/__tests__'),
+  ];
+
   const filesToRemove = [
     resolve(__dirname, '.all-contributorsrc'),
     resolve(__dirname, 'src/api/resources/example.js'),
-    resolve(__dirname, 'src/models/count.js'),
     resolve(__dirname, 'setup.js'),
   ];
 
@@ -76,11 +78,11 @@ function removeFiles() {
       replace: 'export default {};\n',
     },
     {
-      file: resolve(__dirname, 'src/models/index.js'),
-      replace: 'export default {};\n',
+      file: resolve(__dirname, 'public/index.html'),
+      replace: [/React Etalpreliob/gi, ''],
     },
     {
-      file: resolve(__dirname, 'public/index.html'),
+      file: resolve(__dirname, 'public/manifest.json'),
       replace: [/React Etalpreliob/gi, ''],
     },
     {
@@ -91,8 +93,8 @@ function removeFiles() {
       file: resolve(__dirname, 'src/containers/Home/index.js'),
       replace: `import React from 'react';
 
-import Container from '@/components/Container';
-import Head from '@/components/Head';
+import Container from '#/components/Container';
+import Head from '#/components/Head';
 
 export default function Home() {
   return (
@@ -104,6 +106,8 @@ export default function Home() {
 `,
     },
   ];
+
+  foldersToRemove.forEach(folder => rimraf(folder));
 
   filesToRemove.forEach(file => unlinkSync(file));
 

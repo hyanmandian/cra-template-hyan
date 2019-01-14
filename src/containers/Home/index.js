@@ -1,32 +1,28 @@
-import React, { PureComponent } from 'react';
-import { connect } from 'react-redux';
+import React, { useState } from "react";
 
-import Container from '@/components/Container';
-import Head from '@/components/Head';
+import Head from "#/components/Head";
+import Container from "#/components/Container";
 
-export class Home extends PureComponent {
-  handleClick = async () => {
-    await this.props.dispatch.count.incrementAsync();
-  };
+export default function Home() {
+  const [counter, setCounter] = useState(0);
 
-  render() {
-    const { value } = this.props.count;
-
-    return (
-      <Container>
-        <Head title="Home" />
-        Hello :D <br />
-        <button onClick={this.handleClick}>+</button> {value}
-      </Container>
-    );
-  }
+  return (
+    <Container>
+      <Head title="Home" />
+      Hello :D <br />
+      <button
+        data-testid="increment-button"
+        onClick={() => setCounter(counter + 1)}
+      >
+        +
+      </button>
+      <span data-testid="counter">{counter}</span>
+      <button
+        data-testid="decrement-button"
+        onClick={() => setCounter(counter - 1)}
+      >
+        -
+      </button>
+    </Container>
+  );
 }
-
-const mapState = state => ({ count: state.count });
-
-const mapDispatch = dispatch => ({ dispatch });
-
-export default connect(
-  mapState,
-  mapDispatch
-)(Home);

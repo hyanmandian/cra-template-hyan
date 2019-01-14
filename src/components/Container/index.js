@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 const Container = styled.div`
-  max-width: ${({ theme }) => theme.container.maxWidth};
+  max-width: 1024px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 ${({ theme }) => theme.container.gutter};
+  padding: 0 20px;
 `;
 
 export default Container;
