@@ -1,3 +1,3 @@
-import 'jest-emotion';
-import 'jest-dom/extend-expect';
-import 'react-testing-library/cleanup-after-each';
+require('jest-emotion');
+require('jest-dom/extend-expect');
+require('react-testing-library/cleanup-after-each');

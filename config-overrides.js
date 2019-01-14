@@ -1,14 +1,17 @@
-const path = require('path');
-const { injectBabelPlugin } = require('react-app-rewired');
+const path = require("path");
+const { override, addWebpackAlias, addBabelPlugins } = require("customize-cra");
 
-module.exports = (config, env) => {
-  config.resolve.alias = {
-    ...config.resolve.alias,
-    '#': path.resolve('./src'),
-  };
+module.exports = {
+  webpack: override(
+    addWebpackAlias({
+      "#": path.resolve(__dirname, "./src")
+    }),
+    ...addBabelPlugins("emotion", "react-hot-loader/babel")
+  ),
+  jest: config => {
+    config.setupTestFrameworkScriptFile = '<rootDir>/test/jest.setup.js';
+    config.moduleNameMapper['#(.*)$'] = '<rootDir>/src/$1';
 
-  injectBabelPlugin('emotion', config);
-  injectBabelPlugin('react-hot-loader/babel', config);
-
-  return config;
+    return config;
+  },
 };
