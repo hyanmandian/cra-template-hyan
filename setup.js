@@ -92,6 +92,7 @@ function removeFiles() {
     {
       file: resolve(__dirname, 'src/containers/Home/index.js'),
       replace: `import React from 'react';
+
 import Container from '#/components/Container';
 import Head from '#/components/Head';
 
@@ -136,7 +137,7 @@ installDependencies();
 process.stdout.write('\n');
 
 process.stdout.write('Init git...');
-//cleanGit();
+cleanGit();
 process.stdout.write('\n');
 
 process.stdout.write('Done!');
