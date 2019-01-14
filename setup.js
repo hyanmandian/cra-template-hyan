@@ -82,6 +82,10 @@ function removeFiles() {
       replace: [/React Etalpreliob/gi, ''],
     },
     {
+      file: resolve(__dirname, 'public/manifest.json'),
+      replace: [/React Etalpreliob/gi, ''],
+    },
+    {
       file: resolve(__dirname, 'src/containers/App/index.js'),
       replace: [/React Etalpreliob/gi, ''],
     },
