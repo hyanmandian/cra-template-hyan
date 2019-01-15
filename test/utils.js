@@ -1,4 +1,4 @@
-export const stubDate = fixedDate => {
+export function stubDate(fixedDate) {
   let originalDate;
 
   beforeAll(() => {
