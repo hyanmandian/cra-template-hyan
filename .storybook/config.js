@@ -1,5 +1,6 @@
 import { configure, addDecorator } from '@storybook/react';
 import withBackgrounds from '@storybook/addon-backgrounds';
+import 'sanitize.css';
 
 const req = require.context('../src/components', true, /stories.js$/);
 
