@@ -1,7 +1,3 @@
-import request from '#/utils/request';
+import request from "#/utils/request";
 
-export default {
-  all() {
-    return request.get('http://example.com');
-  },
-};
+export const all = () => request.get("http://example.com");

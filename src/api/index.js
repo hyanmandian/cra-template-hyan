@@ -1,4 +1,4 @@
-import example from './resources/example';
+import * as example from './resources/example';
 
 export default {
   example,
