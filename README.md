@@ -4,7 +4,7 @@
 
 Just another boilerplate based create-react-app (everything that works with create-react-app works with us) with many useful things like:
 
-- Axios
+- Ky
 - Rewired
 - Emotion
 - Storybook
