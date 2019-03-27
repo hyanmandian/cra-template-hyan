@@ -9,7 +9,8 @@ const {
 module.exports = {
   webpack: override(
     addWebpackAlias({
-      "#": path.resolve(__dirname, "./src")
+      "#": path.resolve(__dirname, "./src"),
+      "react-dom": "@hot-loader/react-dom"
     }),
     addBundleVisualizer({}, true),
     ...addBabelPlugins(

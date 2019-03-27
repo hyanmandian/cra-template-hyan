@@ -1,23 +1,11 @@
-import axios from 'axios';
+import ky from "ky";
 
-const request = axios.create({});
-
-request.interceptors.request.use(
-  config => {
-    return config;
-  },
-  error => {
-    return Promise.reject(error);
+const request = ky.extend({
+  retry: 3,
+  hooks: {
+    beforeRequest: [],
+    afterResponse: []
   }
-);
-
-request.interceptors.response.use(
-  response => {
-    return response;
-  },
-  error => {
-    return Promise.reject(error.response);
-  }
-);
+});
 
 export default request;

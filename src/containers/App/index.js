@@ -1,15 +1,18 @@
-import React, { Fragment } from 'react';
-import { hot } from 'react-hot-loader';
-import { node } from 'prop-types';
+import React, { Fragment } from "react";
+import { hot } from "react-hot-loader";
+import { node } from "prop-types";
 
-import Routes from '#/routes';
-import Head from '#/components/Head';
-import GlobalStyle from '#/components/GlobalStyle';
+import Routes from "#/routes";
+import Head from "#/components/Head";
+import GlobalStyle from "#/components/GlobalStyle";
 
 export function App() {
   return (
     <Fragment>
-      <Head titleTemplate="%s - React Etalpreliob" defaultTitle="React Etalpreliob" />
+      <Head
+        titleTemplate="%s - React Etalpreliob"
+        defaultTitle="React Etalpreliob"
+      />
       <GlobalStyle />
       <main>
         <Routes />
@@ -19,7 +22,7 @@ export function App() {
 }
 
 App.propTypes = {
-  children: node,
+  children: node
 };
 
 export default hot(module)(App);

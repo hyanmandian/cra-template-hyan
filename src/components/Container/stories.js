@@ -1,9 +1,9 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import Container from './';
+import Container from "./";
 
-storiesOf('Container', module)
-  .add('default', () => (
+storiesOf("Container", module)
+  .add("default", () => (
     <Container>Put your content here :D</Container>
   ));

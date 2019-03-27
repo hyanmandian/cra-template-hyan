@@ -1,6 +1,6 @@
-import React from 'react';
-import { string } from 'prop-types';
-import { Helmet } from 'react-helmet';
+import React from "react";
+import { string } from "prop-types";
+import { Helmet } from "react-helmet";
 
 export default function Head({ title, description, ...props }) {
   return (
@@ -12,12 +12,12 @@ export default function Head({ title, description, ...props }) {
 }
 
 Head.defaultProps = {
-  title: '',
-  description: '',
+  title: "",
+  description: ""
 };
 
 Head.propTypes = {
   title: string,
   description: string,
-  ...Helmet.propTypes,
+  ...Helmet.propTypes
 };
