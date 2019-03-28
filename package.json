@@ -17,9 +17,6 @@
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-optional-chaining": "^7.2.0",
-    "@storybook/addon-actions": "^5.0.5",
-    "@storybook/addon-backgrounds": "^5.0.5",
-    "@storybook/addon-links": "^5.0.5",
     "@storybook/react": "^5.0.5",
     "all-contributors-cli": "^6.2.0",
     "babel-plugin-emotion": "^10.0.6",
