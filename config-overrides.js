@@ -19,10 +19,10 @@ module.exports = {
       "@babel/proposal-optional-chaining"
     )
   ),
-  jest: config => {
-    config.setupTestFrameworkScriptFile = "<rootDir>/test/jest.setup.js";
-    config.moduleNameMapper["#(.*)$"] = "<rootDir>/src/$1";
-
-    return config;
-  }
+  jest: config => ({
+    ...config,
+    setupFilesAfterEnv: ["<rootDir>/.jest/setup.js"],
+    moduleNameMapper: { "#(.*)$": "<rootDir>/src/$1" },
+    coverageDirectory: "<rootDir>./coverage"
+  })
 };
