@@ -7,7 +7,7 @@
     "@emotion/styled": "^10.0.11",
     "@hot-loader/react-dom": "^16.8.6",
     "@reach/router": "^1.2.1",
-    "ky": "^0.11.0",
+    "ky-universal": "^0.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-helmet": "^6.0.0-beta",

@@ -1,4 +1,4 @@
-import ky from "ky";
+import ky from "ky-universal";
 
 const request = ky.extend({
   retry: 3,
