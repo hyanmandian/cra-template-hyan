@@ -19,6 +19,6 @@ module.exports = {
     ...config,
     setupFilesAfterEnv: ["<rootDir>/.jest/setup.js"],
     moduleNameMapper: { "#(.*)$": "<rootDir>/src/$1" },
-    coverageDirectory: "<rootDir>./coverage"
+    coverageDirectory: "<rootDir>/.coverage"
   })
 };
