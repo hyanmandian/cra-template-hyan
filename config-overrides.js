@@ -13,11 +13,7 @@ module.exports = {
       "react-dom": "@hot-loader/react-dom"
     }),
     addBundleVisualizer({}, true),
-    ...addBabelPlugins(
-      "emotion",
-      "react-hot-loader/babel",
-      "@babel/proposal-optional-chaining"
-    )
+    ...addBabelPlugins("emotion", "react-hot-loader/babel")
   ),
   jest: config => ({
     ...config,
