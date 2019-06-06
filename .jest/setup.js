@@ -1,6 +1,6 @@
 require("jest-emotion");
 require("jest-dom/extend-expect");
-require("react-testing-library/cleanup-after-each");
+require("@testing-library/react/cleanup-after-each");
 
 class LocalStorage {
   constructor() {
