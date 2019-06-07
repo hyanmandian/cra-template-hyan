@@ -3,10 +3,10 @@ import { Router } from "@reach/router";
 
 const LazyHome = lazy(() => import("./containers/Home"));
 
-function Home() {
+function Home(props) {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <LazyHome />
+      <LazyHome {...props} />
     </Suspense>
   );
 }
