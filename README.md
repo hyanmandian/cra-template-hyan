@@ -6,12 +6,13 @@ Just another boilerplate based create-react-app (everything that works with crea
 
 - Ky
 - Rewired
-- Emotion
 - Storybook
+- Normalize
+- Typescript
 - Hot Loader
-- Sanitize.css
-- Reach Router
+- React Snap
 - React Helmet
+- React Router
 - Bundle Analyzer (just add --analyze flag after npm scripts)
 
 ## Getting started
