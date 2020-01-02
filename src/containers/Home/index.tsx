@@ -4,7 +4,7 @@ import { Meta } from "#/components/Meta";
 
 import styles from "./styles.module.scss";
 
-export default function Home() {
+const Home: React.FC = () => {
   const [counter, setCounter] = useState(0);
 
   function increment() {
@@ -28,4 +28,6 @@ export default function Home() {
       </button>
     </div>
   );
-}
+};
+
+export default Home;
