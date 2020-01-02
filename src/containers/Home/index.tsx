@@ -16,7 +16,7 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles["counter-wrapper"]}>
       <Meta title="Home" />
       Hello :D <br />
       <button onClick={increment} data-testid="increment-button">
