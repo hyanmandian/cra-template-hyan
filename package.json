@@ -90,14 +90,14 @@
     }
   },
   "lint-staged": {
+    "*.{css,scss,js,jsx,ts,tsx}": [
+      "npm run prettify"
+    ],
     "*.{css,scss}": [
       "npm run lint:css"
     ],
     "*.{js,jsx,ts,tsx}": [
       "npm run lint:js"
-    ],
-    "*.{css,scss,js,jsx,ts,tsx}": [
-      "npm run prettify"
     ]
   },
   "eslintConfig": {
