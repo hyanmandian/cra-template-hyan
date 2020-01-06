@@ -2,20 +2,26 @@
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors) [![License: MIT](https://img.shields.io/github/license/hyanmandian/react-etalpreliob.svg)](LICENSE)
 
-Just another boilerplate based create-react-app (everything that works with create-react-app works with us) with many useful things like:
+Just another boilerplate based create-react-app (everything that works with create-react-app works with us) with many useful things.
 
 ## Features
 
 - Ky
+- Husky
+- Eslint
 - Rewired
+- Prettier
+- Sanitize
 - Storybook
-- Normalize
+- Stylelint
 - Typescript
+- Commitlint
 - Hot Loader
 - React Snap
 - React Helmet
 - React Router
 - Bundle Analyzer (just add `--analyze` flag to `npm run build`)
+- React Testing Library
 
 ## Getting started
 
