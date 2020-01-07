@@ -37,9 +37,6 @@ function cleanPackageJson() {
   const packageJson = require("./package.json");
 
   delete packageJson.scripts["setup"];
-  delete packageJson.scripts["contributors:add"];
-  delete packageJson.scripts["contributors:generate"];
-  delete packageJson.devDependencies["all-contributors-cli"];
 
   writeFileSync(
     resolve(__dirname, "package.json"),
