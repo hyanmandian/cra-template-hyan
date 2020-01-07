@@ -62,8 +62,7 @@ function removeFiles() {
   const filesToReplace = [
     {
       file: resolve(__dirname, "src/containers/Home/index.tsx"),
-      replace: `
-import React, { Fragment } from "react";
+      replace: `import React, { Fragment } from "react";
 
 import { Meta } from "#/components/Meta";
 
@@ -76,16 +75,13 @@ const Home: React.FC = () => {
 };
 
 export default Home;
-
 `
     },
     {
       file: resolve(__dirname, "README.md"),
-      replace: `
-# Project name
+      replace: `# Project name
 
 This project was started with (React Etalpreliob)[https://github.com/hyanmandian/react-etalpreliob].
-
 `
     }
   ];
