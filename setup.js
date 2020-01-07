@@ -82,7 +82,7 @@ export default Home;
 
   foldersToRemove.forEach(folder => rimraf(folder));
 
-  filesToRemove.forEach(file => unlinkSync(file));
+  filesToRemove.forEach(file => existsSync(file) && unlinkSync(file));
 
   filesToReplace.forEach(({ file, replace }) => {
     const content = Array.isArray(replace)
