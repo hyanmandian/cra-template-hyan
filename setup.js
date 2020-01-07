@@ -81,7 +81,7 @@ export default Home;
       file: resolve(__dirname, "README.md"),
       replace: `# Project name
 
-This project was started with (React Etalpreliob)[https://github.com/hyanmandian/react-etalpreliob].
+This project was started with [React Etalpreliob](https://github.com/hyanmandian/react-etalpreliob).
 `
     }
   ];
