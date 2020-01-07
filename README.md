@@ -1,7 +1,5 @@
 # React Etalpreliob
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors) [![License: MIT](https://img.shields.io/github/license/hyanmandian/react-etalpreliob.svg)](LICENSE)
-
 Just another boilerplate based create-react-app (everything that works with create-react-app works with us) with many useful things.
 
 ## Features
