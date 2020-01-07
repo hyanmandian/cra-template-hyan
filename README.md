@@ -2,23 +2,32 @@
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors) [![License: MIT](https://img.shields.io/github/license/hyanmandian/react-etalpreliob.svg)](LICENSE)
 
-Just another boilerplate based create-react-app (everything that works with create-react-app works with us) with many useful things like:
+Just another boilerplate based create-react-app (everything that works with create-react-app works with us) with many useful things.
+
+## Features
 
 - Ky
+- Husky
+- Eslint
 - Rewired
-- Emotion
+- Prettier
+- Sanitize
 - Storybook
+- Stylelint
+- Typescript
+- Commitlint
 - Hot Loader
-- Sanitize.css
-- Reach Router
+- React Snap
 - React Helmet
-- Bundle Analyzer (just add --analyze flag after npm scripts)
+- React Router
+- Bundle Analyzer (just add `--analyze` flag to `npm run build`)
+- React Testing Library
 
 ## Getting started
 
 1. Clone this repo using `git clone https://github.com/hyanmandian/react-etalpreliob.git`.
 2. Move to the appropriate directory: `cd react-etalpreliob`.
-3. Run `npm run setup` in order to install dependencies, clean the git repo and remove unnecessary files (like the example app). We auto-detect `yarn` for installing packages by default, if you wish to force `npm` usage do: `USE_YARN=false npm run setup`.
+3. Run `npm run setup` in order to install dependencies, clean the git repo and remove unnecessary files (like the example app).
 
 ## Contributors
 
@@ -41,7 +50,8 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
+This project follows the [all-contributors](https://allcontributors.org) specification.
+Contributions of any kind are welcome!
 
 ## License
 

@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "target": "esnext",
-    "baseUrl": "./src",
-    "paths": {
-      "#/*": ["./src/*"]
-    }
-  }
-}
