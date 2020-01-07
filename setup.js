@@ -54,6 +54,7 @@ function removeFiles() {
   const filesToRemove = [
     resolve(__dirname, ".all-contributorsrc"),
     resolve(__dirname, "setup.js"),
+    resolve(__dirname, "LICENSE"),
     resolve(__dirname, "src/containers/Home/index.test.tsx"),
     resolve(__dirname, "src/containers/Home/styles.module.scss")
   ];
@@ -75,6 +76,15 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
+`
+    },
+    {
+      file: resolve(__dirname, "README.md"),
+      replace: `
+# Project name
+
+This project was started with (React Etalpreliob)[https://github.com/hyanmandian/react-etalpreliob].
 
 `
     }
