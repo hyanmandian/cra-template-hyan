@@ -48,6 +48,17 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "thsoliveira",
+      "name": "thsoliveira",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/40253255?v=4",
+      "profile": "https://github.com/thsoliveira",
+      "contributions": [
+        "review"
+      ]
     }
-  ]
+  ],
+  "skipCi": true,
+  "contributorsPerLine": 7
 }
