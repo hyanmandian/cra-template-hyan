@@ -1,7 +1,6 @@
 {
   "name": "react-etalpreliob",
   "version": "0.0.0",
-  "private": true,
   "dependencies": {
     "@hot-loader/react-dom": "^16.11.0",
     "ky": "^0.16.1",
@@ -56,6 +55,7 @@
     "lint:js": "eslint --fix ./src/**/*.{js,jsx,ts,tsx}",
     "lint:css": "stylelint --fix ./src/**/*.{css,scss}",
     "prettify": "prettier --write ./src/**/*.{css,scss,js,jsx,ts,tsx}",
+    "setup": "node setup.js",
     "commit": "npx git-cz"
   },
   "jest": {
