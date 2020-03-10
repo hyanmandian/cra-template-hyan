@@ -1,6 +1,6 @@
-# Hyan React Template
+# Hyan Create React App Template
 
-Just another [cra-template](https://create-react-app.dev/docs/custom-templates/) with things I like.
+My personal [cra-template](https://create-react-app.dev/docs/custom-templates/) with things I like.
 
 ## Features
 
@@ -21,9 +21,13 @@ Just another [cra-template](https://create-react-app.dev/docs/custom-templates/)
 - [React App Rewired](https://github.com/timarney/react-app-rewired)
 - [React Testing Library](https://github.com/kentcdodds/react-testing-library)
 
-## Installation
+## Usage
 
-`npx create react-app my-project --template @hyanmandian/cra-template-hyan`
+```sh
+npx create react-app my-app --template hyan
+cd my-app
+npm start
+```
 
 ## Contributors
 
