@@ -1,31 +1,33 @@
-# React Etalpreliob
+# Hyan Create React App Template
 
-Just another boilerplate based create-react-app (everything that works with create-react-app works with us) with many useful things.
+My personal [cra-template](https://create-react-app.dev/docs/custom-templates/) with things I like.
 
 ## Features
 
-- Ky
-- Husky
-- Eslint
-- Rewired
-- Prettier
-- Sanitize
-- Storybook
-- Stylelint
-- Typescript
-- Commitlint
-- Hot Loader
-- React Snap
-- React Helmet
-- React Router
-- Bundle Analyzer (just add `--analyze` flag to `npm run build`)
-- React Testing Library
+- [Ky](https://github.com/sindresorhus/ky-universal)
+- [Husky](https://github.com/typicode/husky)
+- [ESLint](https://github.com/eslint/eslint)
+- [Prettier](https://github.com/prettier/prettier)
+- [Sanitize](https://github.com/csstools/sanitize.css)
+- [Storybook](https://github.com/storybookjs/storybook)
+- [Stylelint](https://github.com/stylelint/stylelint)
+- [Typescript](https://github.com/microsoft/TypeScript)
+- [Commitlint](https://github.com/conventional-changelog/commitlint)
+- [Hot Loader](https://github.com/hot-loader/react-dom)
+- [React Snap](https://github.com/stereobooster/react-snap)
+- [React Helmet](https://github.com/nfl/react-helmet)
+- [React Router](https://github.com/ReactTraining/react-router)
+- [Bundle Analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
+- [React App Rewired](https://github.com/timarney/react-app-rewired)
+- [React Testing Library](https://github.com/kentcdodds/react-testing-library)
 
-## Getting started
+## Usage
 
-1. Clone this repo using `git clone https://github.com/hyanmandian/react-etalpreliob.git`.
-2. Move to the appropriate directory: `cd react-etalpreliob`.
-3. Run `npm run setup` in order to install dependencies, clean the git repo and remove unnecessary files (like the example app).
+```sh
+npx create react-app my-app --template hyan
+cd my-app
+npm start
+```
 
 ## Contributors
 

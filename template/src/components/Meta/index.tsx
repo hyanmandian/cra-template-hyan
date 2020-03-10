@@ -25,6 +25,6 @@ export const Meta: React.FC<Props> = ({
 
 Meta.defaultProps = {
   lang: "en",
-  defaultTitle: "React Etalpreliob",
-  titleTemplate: "%s - React Etalpreliob"
+  defaultTitle: "React App",
+  titleTemplate: "%s - React App"
 };
