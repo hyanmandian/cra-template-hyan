@@ -24,7 +24,7 @@ My personal [cra-template](https://create-react-app.dev/docs/custom-templates/) 
 ## Usage
 
 ```sh
-npx create react-app my-app --template hyan
+npx create-react-app my-app --template hyan
 cd my-app
 npm start
 ```
