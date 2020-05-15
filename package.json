@@ -10,6 +10,8 @@
     "ky",
     "husky",
     "eslint",
+    "react query",
+    "mirage",
     "prettier",
     "sanitize",
     "storybook",

@@ -4,22 +4,25 @@ My personal [cra-template](https://create-react-app.dev/docs/custom-templates/) 
 
 ## Features
 
-- [Ky](https://github.com/sindresorhus/ky-universal)
-- [Husky](https://github.com/typicode/husky)
-- [ESLint](https://github.com/eslint/eslint)
-- [Prettier](https://github.com/prettier/prettier)
-- [Sanitize](https://github.com/csstools/sanitize.css)
-- [Storybook](https://github.com/storybookjs/storybook)
-- [Stylelint](https://github.com/stylelint/stylelint)
-- [Typescript](https://github.com/microsoft/TypeScript)
-- [Commitlint](https://github.com/conventional-changelog/commitlint)
-- [Hot Loader](https://github.com/hot-loader/react-dom)
-- [React Snap](https://github.com/stereobooster/react-snap)
-- [React Helmet](https://github.com/nfl/react-helmet)
-- [React Router](https://github.com/ReactTraining/react-router)
-- [Bundle Analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
-- [React App Rewired](https://github.com/timarney/react-app-rewired)
-- [React Testing Library](https://github.com/kentcdodds/react-testing-library)
+- [Ky](https://github.com/sindresorhus/ky-universal);
+- [Husky](https://github.com/typicode/husky);
+- [ESLint](https://github.com/eslint/eslint);
+- [Mirage JS](https://miragejs.com);
+- [Prettier](https://github.com/prettier/prettier);
+- [Sanitize](https://github.com/csstools/sanitize.css);
+- [Storybook](https://github.com/storybookjs/storybook);
+- [Stylelint](https://github.com/stylelint/stylelint);
+- [Typescript](https://github.com/microsoft/TypeScript);
+- [Commitlint](https://github.com/conventional-changelog/commitlint);
+- [Hot Loader](https://github.com/hot-loader/react-dom);
+- [React Snap](https://github.com/stereobooster/react-snap);
+- [React Query](https://github.com/tannerlinsley/react-query);
+- [React Helmet](https://github.com/nfl/react-helmet);
+- [React Router](https://github.com/ReactTraining/react-router);
+- [Utility Types](https://github.com/piotrwitek/utility-types);
+- [Bundle Analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer);
+- [React App Rewired](https://github.com/timarney/react-app-rewired);
+- [React Testing Library](https://github.com/kentcdodds/react-testing-library).
 
 ## Usage
 

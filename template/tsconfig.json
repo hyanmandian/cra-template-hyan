@@ -1,5 +1,5 @@
 {
-  "extends": "./.internals/path.json",
+  "extends": "./.internals/tsconfig.json",
   "compilerOptions": {
     "target": "es5",
     "lib": [

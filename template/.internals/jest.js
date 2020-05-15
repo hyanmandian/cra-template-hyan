@@ -1,8 +1,13 @@
-require("@testing-library/jest-dom/extend-expect");
+require("@testing-library/jest-dom");
+
+const locationRef = window.location;
+delete window.location;
+window.location = { ...locationRef };
+window.MutationObserver = require("@sheerun/mutationobserver-shim");
 
 beforeEach(() => {
-  jest.spyOn(window, "fetch").mockImplementation((...args) => {
-    console.warn("window.fetch is not mocked for this call", ...args);
-    throw new Error("This must be mocked!");
-  });
+  jest.restoreAllMocks();
+  console.warn = jest.fn();
+  console.error = jest.fn();
+  window.location = { ...locationRef };
 });

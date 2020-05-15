@@ -3,14 +3,17 @@ import { Helmet, HelmetProps } from "react-helmet";
 
 export type Props = HelmetProps & {
   lang?: string;
+  title?: string;
   description?: string;
 };
 
 export const Meta: React.FC<Props> = ({
-  lang,
+  lang = "en",
   title,
   children,
   description,
+  defaultTitle = "React App",
+  titleTemplate = "%s - React App",
   ...props
 }) => {
   return (
@@ -21,10 +24,4 @@ export const Meta: React.FC<Props> = ({
       {children}
     </Helmet>
   );
-};
-
-Meta.defaultProps = {
-  lang: "en",
-  defaultTitle: "React App",
-  titleTemplate: "%s - React App"
 };

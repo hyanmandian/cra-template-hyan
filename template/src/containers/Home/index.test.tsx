@@ -1,11 +1,15 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, waitFor } from "@testing-library/react";
 
 import Home from "./";
 
+function setup() {
+  return render(<Home />);
+}
+
 describe("Home", () => {
   test("increment counter", () => {
-    const { getByTestId } = render(<Home />);
+    const { getByTestId } = setup();
 
     expect(getByTestId("counter")).toHaveTextContent("0");
 
@@ -17,7 +21,7 @@ describe("Home", () => {
   });
 
   test("decrement counter", () => {
-    const { getByTestId } = render(<Home />);
+    const { getByTestId } = setup();
 
     expect(getByTestId("counter")).toHaveTextContent("0");
 
