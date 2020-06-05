@@ -1,5 +1,5 @@
 export const APP = {
-  API: "https://example.com/",
+  API: process.env.REACT_APP_API,
 };
 
 export const PAGE = {
