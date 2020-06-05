@@ -6,7 +6,7 @@ import { APP } from "#/constants";
 const emitter = mitt();
 
 export const request = ky.extend({
-  retry: 0,
+  retry: 0, // disabled because `react-query` handle retries for us
   hooks: {
     beforeRequest: [
       (request) => {
